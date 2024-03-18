@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import jwtSecret from "../config/jwt.mjs";
+import jwtSecret from "../config/jwt.js";
 import userAuth from "../modules/UserAuth.mjs";
 
 async function verifyToken(req, res, next) {
