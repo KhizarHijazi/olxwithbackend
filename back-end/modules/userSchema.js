@@ -42,17 +42,17 @@ userSchema.pre('save', function(next){
 
 userSchema.methods.comparePassword = function(password) {
     const user = this
-    console.log('db password', user.password)
-    console.log('frontend password', password)
+    // console.log('db password', user.password)
+    // console.log('frontend password', password)
   return  bcrypt.compareSync(password, user.password);
 
 }
 
 userSchema.methods.generateToken = function (){
     const {_id } = this
-    console.log(_id ,"this wali _id")
+    // console.log(_id ,"this wali _id")
     const token = jwt.sign({ _id }, jwtSecret);
-    console.log('jwt token' , token)
+    // console.log('jwt token' , token)
     return token
 }
 
